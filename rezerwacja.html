@@ -19,37 +19,43 @@
         <div class="kon">
             <center>
                 <img width="180" src="pictures\Bez nullllllllnazwy255.png" alt="">
-                <a href="index.html"><img width="180" src="pictures\witamyb.png" alt=""></a>
+                <a href="index.html"><img id="imgg" width="180" src="pictures\witamy.png" alt=""></a>
                 <a href="oferta.html"><img id="imgg" width="180" src="pictures\oferta.png" alt=""></a>
                 <a href="badania.html"><img id="imgg" width="180" src="pictures\badania.png" alt=""></a>
-                <a href="rezerwacja.html"><img id="imgg" width="180" src="pictures\rezerwacja.png" alt=""></a>
+                <a href="rezerwacja.html"><img width="180" src="pictures\rezerwacjab.png" alt=""></a>
                 <a href="kontakt.html"><img id="imgg" width="180" src="pictures\kontakt.png" alt=""></a>
             </center>
             </div>
-            <div class="textt" style="padding: 50px;"><center>
+            <div class="textt" style="padding: 50px;">
+                <form>
                 <table>
+                    <tr><td>Formularz kontaktowy</td></tr>
                     <tr>
-                        <td>Bardzo serdecznie witamy Państwa na stronach naszego Gabinetu.<br><br></td>
+                        <td></td>
+                        <td><label for="Imie">Imię:</label></td>
+                        <td><label for="Nazwisko">Nazwisko:</label></td>
+                        <td><label for="email">e-mail:</label></td>
                     </tr>
                     <tr>
-                        <td>Nasz Gabinet rozpoczoł działalność w 2011 roku.<br><br></td>
+                        <td></td>
+                        <td><input type="text" name="" id="Imie" required></td>
+                        <td><input type="text" name="" id="Nazwisko"></td>
+                        
+                        <td><input type="email" name="" id="email" required></td>
                     </tr>
                     <tr>
-                        <td>Współpracujemy z wileoma neurologami i wykonujemy Badania EEG.<br><br></td>
+                        <td></td>
+                        <td><input type="date" name="" id="date" required></td>
                     </tr>
-                    <tr>
-                        <td>Do badań EEG wykorzystujemy profesjonalny sprzęt firmy ELMIKO.</td>
-                    </tr>
-                </table></center>
+                    <tr><td></td><td colspan="5"><input type="checkbox" name="" id="send" required><label for="send"> Wyrażam zgodę na przetwarzanie moich danych</label><br>
+                        <input type="submit" value="Wyślij"></td></tr>
                 
-
-
-
-
-
-
                 
-            </div>
+            </table>
+            
+            </form>
         </div>
+        </div>
+        
 </body>
 </html>

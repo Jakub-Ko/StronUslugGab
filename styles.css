@@ -7,6 +7,7 @@ body{
     font-size: 20px;
     color: black;
     text-decoration: none;
+    background-color: #9fa2a7;
 
 }
 * {
@@ -20,6 +21,10 @@ a {
 table,th {
     border-color: black;
     height: 4%;
+}
+td {
+    padding: 5px;
+    text-align: center;
 }
 .main {
     width: 80%;
@@ -64,6 +69,9 @@ img{
 }
 img:hover{
     transform: scale(1.1);
+}
+#imgg:hover{
+    filter: invert(100%);
 }
 .bar {
     background-color: #9fa2a7;
