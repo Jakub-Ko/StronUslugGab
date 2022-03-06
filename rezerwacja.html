@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GABINET MEDYCZNY</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -18,7 +18,7 @@
         </div>
         <div class="kon">
             <center>
-                <img width="180" src="pictures\Bez nullllllllnazwy255.png" alt="">
+                <div id="null"></div>
                 <a href="index.html"><img id="imgg" width="180" src="pictures\witamy.png" alt=""></a>
                 <a href="oferta.html"><img id="imgg" width="180" src="pictures\oferta.png" alt=""></a>
                 <a href="badania.html"><img id="imgg" width="180" src="pictures\badania.png" alt=""></a>
@@ -27,35 +27,63 @@
             </center>
             </div>
             <div class="textt" style="padding: 50px;">
-                <form>
-                <table>
+                <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbwzm_bVHnmXSkuL7T2cSeZimjAriM89lb-QK2fAIfhWVL6hj126Un9dA71iNdK9LHyA/exec">
+                <table class="elem">
                     <tr><td>Formularz kontaktowy</td></tr>
                     <tr>
                         <td></td>
-                        <td><label for="Imie">Imię:</label></td>
-                        <td><label for="Nazwisko">Nazwisko:</label></td>
-                        <td><label for="email">e-mail:</label></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="text" name="" id="Imie" required></td>
-                        <td><input type="text" name="" id="Nazwisko"></td>
+                        <td><label for="Imie">Imię i Nazwisko:<span class="req">*</span></label><input type="text" name="imie" id="Imie" required placeholder="Imię"></td>
+                        <td><label for="telefon">Numer telefonu do kontaktu:</label><input type="tel" name="tel" id="telefon" placeholder="Nr telefonu"></td>
                         
-                        <td><input type="email" name="" id="email" required></td>
+                        <td><label for="email">e-mail:<span class="req">*</span></label><input type="email" name="email" id="email" required placeholder="e-mail"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="date" name="" id="date" required></td>
+                        <td colspan="2" style="text-align: right;"><input type="checkbox" name="dat" id="dat"><label class="dat disabled" for="dat"> Proszę o wstępną rezerwację terminu w dniu:</label></td>
+                        <td><input type="date" name="data" id="date" required disabled></td>
                     </tr>
-                    <tr><td></td><td colspan="5"><input type="checkbox" name="" id="send" required><label for="send"> Wyrażam zgodę na przetwarzanie moich danych</label><br>
+                    <tr>
+                        <td></td>
+                        <td colspan="3"><textarea name="textarea" id="textarea" placeholder="Jeśli chcesz, wpisz tutaj treść wiadomości..." rows="3" style="resize: none;padding: 10px;" maxlength="220"></textarea>
+                        <span class="count"><span id="count">0</span> / 220</span>
+                        </td>
+                    </tr>
+                    <tr><td></td><td colspan="5"><input type="checkbox" name="" id="send" required><label for="send"> Wyrażam zgodę na przetwarzanie moich danych<span class="req">*</span></label><br>
                         <input type="submit" value="Wyślij"></td></tr>
                 
                 
             </table>
-            
+            <div style="display:none" class="koniec">
+                <!-- You can customize the thankyou message by editing the code below -->
+                <h2><center>Dziękujemy za DUSZE?!AHHAHAHAHAHAHAHAHHAHA</center>
+                </h2><h6>sprzedales sie</h6>
+               </div>
             </form>
+
         </div>
         </div>
-        
+        <script>
+        date.min = new Date().toLocaleDateString('en-ca');
+        date.value = new Date().toLocaleDateString('en-ca');
+        if ($('#dat').prop("checked")){
+                $('.dat').removeClass('disabled');
+            }
+        $('#dat').on("input", function() {
+            if ($(this).prop("checked")){
+                $('#date').prop('disabled', false);
+                $('.dat').removeClass('disabled');
+            }else{
+                $('#date').prop('disabled', true);
+                $('.dat').addClass('disabled');
+
+            }
+        });
+
+        $('textarea').on("input", function() {
+            var currentLength = $(this).val().length;
+            $('#count').text(currentLength);
+            });
+        </script>
+        <script data-cfasync="false" type="text/javascript" src="formsubmission.js"></script>
 </body>
 </html>

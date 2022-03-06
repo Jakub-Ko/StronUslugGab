@@ -13,7 +13,22 @@ body{
 * {
     padding: 0px;
     margin: 0px;
-
+}
+@media only screen and (max-width: 1386px) {
+    #null {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1387px) {
+    #null {
+        display: inline-block;
+    }
+}
+#null{
+    width: 180px;
+    height: 180px;
+    background: transparent;
+    /*border: 1px solid black;/**/
 }
 a {
     color: black;
@@ -21,10 +36,12 @@ a {
 table,th {
     border-color: black;
     height: 4%;
+    /*border: 1px solid;/**/
 }
 td {
     padding: 5px;
     text-align: center;
+    /*border: 1px solid;/**/
 }
 .main {
     width: 80%;
@@ -37,7 +54,7 @@ td {
     height: 8%;
     padding-bottom: 1%;
     position: relative;
-    color: rgb(0, 107, 107);
+    color: rgb(0, 107, 107);    padding-top: 10px;
   }
 .headertext {
     position: absolute;
@@ -87,4 +104,64 @@ img:hover{
     text-decoration-color: aqua;
     background: rgba(255, 255, 255, 0.65);
     margin-top: 10px;
+}
+input[type=text],input[type=tel],input[type=email],input[type=date],textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#date{
+    border: 0px;
+    background-color: transparent;
+    font-size: 20px;
+}
+label[for=Imie],label[for=telefon],label[for=email] {
+    float: left;
+    margin-left: 5px;
+}
+label{
+    font-size: 12px;
+}
+.dat{
+    font-size: 20px;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.req{
+    color: #e04562;
+}
+.count{
+    font-size: 14px;
+    float: right;
+}
+input[type="date"]:disabled,.disabled {
+    color: grey;
+}
+#wrap{
+    width: 100%;
+    overflow: hidden;
+    display:inline-block;
+    text-align: center;
+}
+#pierwszy{
+    float: left;
+}
+#drugi{
+    text-align: center;
+    display: inline-block;
 }
