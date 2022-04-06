@@ -105,6 +105,7 @@ img:hover{
     background: rgba(255, 255, 255, 0.65);
     margin-top: 10px;
 }
+<<<<<<< HEAD
 input[type=text],input[type=tel],input[type=email],input[type=date],textarea {
     width: 100%;
     padding: 12px 20px;
@@ -165,3 +166,5 @@ input[type="date"]:disabled,.disabled {
     text-align: center;
     display: inline-block;
 }
+=======
+>>>>>>> d21e1826619f57cd7c1e6aa8e76db71669402ebd
